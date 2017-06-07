@@ -1,0 +1,25 @@
+Categories:
+
+
+1. Linked Lists
+
+
+
+2. Arrays
+
+
+
+3. Binary Search Trees
+
+
+
+4. Recursion
+
+
+
+5. Classes
+
+
+
+
+6. File I/O
