@@ -1,3 +1,45 @@
+Exam topics: The CPSC 301 initial exams will cover
+the following main topics in CPSC 120, 121, and 131.
+Please remember that texts are allowed during the
+exam, but no lecture notes or code listings.
+
+
+
+Program design with pseudocode using modularity
+and information hiding.
+
+Program documentation.
+
+Correct and appropriate use in programs of the
+following:
+
+  standard control structures for
+  assignment, selection, repetition functions.
+
+  input and output to and from text and binary files.
+
+  arrays and strings.
+
+  pointers and dynamic variables.
+
+  recursion.
+
+  classes and objects of the classes.
+
+  templates.
+
+  operator overloading.
+
+  lists, stacks, queues, binary trees with both array
+  and linked list implementations.
+
+  searching and sorting.
+
+
+
+
+
+
 Categories:
 
 
