@@ -39,6 +39,20 @@ following:
 
 
 
+******** ITEMS NOT ON EXAM ************
+
+-hashing
+-B, B+ trees
+-inheritance
+-polymorphism
+-virtual
+-functions
+
+****************************************
+
+
+
+
 
 Categories:
 
