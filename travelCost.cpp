@@ -12,7 +12,12 @@ int main()
 {
   //variables
   double mpg, distance, gallons, pricePerGallon, totalCost;
-  //output using insertion operator
+  //output using * insertion operator *
+  cout << "Enter mpg: " << endl;
+  //
+  //input using * extraction operator *
+  cin >> mpg;
+  //
   cout << "Enter distance in miles: "<< endl;
   cin >> distance;
   cout << "Enter price for one gallon of gas: " << endl;
