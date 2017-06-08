@@ -17,5 +17,10 @@ int main()
   cin >> distance;
   cout << "Enter price for one gallon of gas: " << endl;
   cin >> pricePerGallon;
+  //calculate gallons needed
+  gallons = distance / mpg;
+  //calculate total cost
+  totalCost = gallons * pricePerGallon;
+  cout << "Total trip cost: $" << fixed << setprecision(2) << totalCost << endl;
   return 0;
 }
