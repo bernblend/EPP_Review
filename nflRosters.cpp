@@ -10,6 +10,12 @@ string Steelers()
 
 }
 
+string Eagles()
+{
+  cout << "QB1: Carson Wentz" << endl;
+  cout << "RB1: Ryan Matthews" << endl;
+  cout << "WR1: Jordan Matthews" << endl;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -21,6 +27,10 @@ int main(int argc, char const *argv[])
 
   if(team == "Steelers")
     Steelers();
+
+
+  if(team == "Eagles")
+    Eagles();
 
   cout << "\n" << team << endl;
 
