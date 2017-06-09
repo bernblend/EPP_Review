@@ -7,7 +7,6 @@ string Steelers()
   cout << "QB1: Ben Roethlisberger" << endl;
   cout << "RB1: Le'Veon Bell" << endl;
   cout << "WR1: Antonio Brown" << endl;
-
 }
 
 string Eagles()
@@ -15,6 +14,13 @@ string Eagles()
   cout << "QB1: Carson Wentz" << endl;
   cout << "RB1: Ryan Matthews" << endl;
   cout << "WR1: Jordan Matthews" << endl;
+}
+
+string Chargers()
+{
+  cout << "QB1: Phillip Rivers" << endl;
+  cout << "RB1: Melvin Gordon" << endl;
+  cout << "WR1: Mike Williams" << endl;
 }
 
 int main(int argc, char const *argv[])
@@ -28,9 +34,14 @@ int main(int argc, char const *argv[])
   if(team == "Steelers")
     Steelers();
 
-
-  if(team == "Eagles")
+  else if(team == "Eagles")
     Eagles();
+
+  else if(team == "Chargers")
+    Chargers();
+
+  else
+    cout << "Not an NFL team." << endl;
 
   cout << "\n" << team << endl;
 
