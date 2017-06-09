@@ -2,21 +2,21 @@
 #include <iomanip>
 using namespace std;
 
-string Steelers()
+void Steelers()
 {
   cout << "QB1: Ben Roethlisberger" << endl;
   cout << "RB1: Le'Veon Bell" << endl;
   cout << "WR1: Antonio Brown" << endl;
 }
 
-string Eagles()
+void Eagles()
 {
   cout << "QB1: Carson Wentz" << endl;
   cout << "RB1: Ryan Matthews" << endl;
   cout << "WR1: Jordan Matthews" << endl;
 }
 
-string Chargers()
+void Chargers()
 {
   cout << "QB1: Phillip Rivers" << endl;
   cout << "RB1: Melvin Gordon" << endl;
@@ -32,14 +32,17 @@ int main(int argc, char const *argv[])
   cin >> team;
 
   if(team == "Steelers")
+  {
     Steelers();
-
+  }
   else if(team == "Eagles")
+  {
     Eagles();
-
+  }
   else if(team == "Chargers")
+  {
     Chargers();
-
+  }
   else
     cout << "Not an NFL team." << endl;
 
