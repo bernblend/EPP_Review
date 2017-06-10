@@ -10,15 +10,19 @@ double dotProduct(int vectAi, int vectAj, int vectBi, int vectBj)
   double magB;
   double aTimesB;
   double result;
-  double param;
+  double input;
 
   magA = sqrt(exp(vectAi)+exp(vectBi));
 
   magB = sqrt(exp(vectAj)+exp(vectBj));
 
-  aTimesB = ;
+  aTimesB = (vectAi * vectBi) + (vectAj * vectBj);
 
-  result = acos ( param * PI / 180.0 );
+  input = ((aTimesB)/(magA * magB));
+
+  result = acos ( input * PI / 180.0 );
+
+  return result;
 }
 
 int int main(int argc, char const *argv[])
@@ -29,8 +33,9 @@ int int main(int argc, char const *argv[])
   double vectAj;
   double vectBi;
   double vectBj;
-  static double angle;
+  double angle;
 
+  
 
   return 0;
 }
