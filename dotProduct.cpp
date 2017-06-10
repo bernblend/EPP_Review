@@ -4,13 +4,19 @@
 using namespace std;
 
 
-double dotProduct(int vectA, int vectB)
+double dotProduct(int vectAi, int vectAj, int vectBi, int vectBj)
 {
-  double magA
-  double magB
-  double aTimesB
-  double result
-  double param
+  double magA;
+  double magB;
+  double aTimesB;
+  double result;
+  double param;
+
+  magA = sqrt(exp(vectAi)+exp(vectBi));
+
+  magB = sqrt(exp(vectAj)+exp(vectBj));
+
+  aTimesB = ;
 
   result = acos ( param * PI / 180.0 );
 }
