@@ -1,0 +1,8 @@
+Q: How do I upgrade the C++ compiler on Mac OS X and Linux?
+
+A: Refer to C/C++ Essential Training for a detailed look at installing or upgrading the C++ compiler on various platforms.
+
+Q: The link to download the Eclipse IDE in the "Download a C++ IDE" movie doesn't work. Where can I find the IDE?
+
+A: Short URLs are case sensitive and need to be typed in exactly as they appear. Type in or simply click <a target="_blank" href="http://goo.gl/CzckWp">http://goo.gl/CzckWp</a> to visit the Eclipse IDE for C/C++ Developers page.
+
