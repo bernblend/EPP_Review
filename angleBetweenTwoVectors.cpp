@@ -8,7 +8,7 @@
 #include <iomanip>
 #include <cmath>
 using namespace std;
-double dotProduct(double vectAi, double vectAj, double vectAk, double vectBi, double vectBj, double vectBk)
+double angleBetweenVectors(double vectAi, double vectAj, double vectAk, double vectBi, double vectBj, double vectBk)
 {
   double magA;
   double magB;
@@ -48,7 +48,7 @@ int main(int argc, char const *argv[])
   cin >> vectBj;
   cout << "Vector B (k):" << endl;
   cin >> vectBk;
-  angle = dotProduct(vectAi, vectAj, vectAk, vectBi, vectBj, vectBk);
+  angle = angleBetweenVectors(vectAi, vectAj, vectAk, vectBi, vectBj, vectBk);
   std::cout << "The angle between the two vectors is: " << angle << '\n';
   return 0;
 }
