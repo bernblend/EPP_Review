@@ -40,11 +40,15 @@ int main(int argc, char const *argv[])
   cin >> vectAi;
   cout << "Vector A (j):" << endl;
   cin >> vectAj;
+  cout << "Vector A (k):" << endl;
+  cin >> vectAk;
   cout << "Vector B (i):" << endl;
   cin >> vectBi;
   cout << "Vector B (j):" << endl;
   cin >> vectBj;
-  angle = dotProduct(vectAi, vectAj, vectBi, vectBj);
+  cout << "Vector B (k):" << endl;
+  cin >> vectBk;
+  angle = dotProduct(vectAi, vectAj, vectAk, vectBi, vectBj, vectBk);
   std::cout << "The angle between the two vectors is: " << angle << '\n';
   return 0;
 }
