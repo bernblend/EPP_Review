@@ -31,8 +31,10 @@ int main(int argc, char const *argv[])
   //variables
   double vectAi;
   double vectAj;
+  double vectAk;
   double vectBi;
   double vectBj;
+  double vectBk;
   double angle;
   cout << "Vector A (i):" << endl;
   cin >> vectAi;
