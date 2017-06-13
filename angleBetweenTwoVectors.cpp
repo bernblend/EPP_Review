@@ -8,7 +8,7 @@
 #include <iomanip>
 #include <cmath>
 using namespace std;
-double dotProduct(double vectAi, double vectAj, double vectBi, double vectBj)
+double dotProduct(double vectAi, double vectAj, double vectAk, double vectBi, double vectBj, double vectBk)
 {
   double magA;
   double magB;
