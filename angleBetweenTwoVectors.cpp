@@ -16,11 +16,11 @@ double dotProduct(double vectAi, double vectAj, double vectBi, double vectBj)
   double result;
   double input;
   double PI = 3.1415926535897;
-  magA = sqrt((vectAi * vectAi) + (vectAj * vectAj));
+  magA = sqrt((vectAi * vectAi) + (vectAj * vectAj) + (vectAk * vectAk));
   cout << "Magnitude A: " << magA << endl;
-  magB = sqrt((vectBi * vectBi)+(vectBj * vectBj));
+  magB = sqrt((vectBi * vectBi) + (vectBj * vectBj) + (vectBk * vectBk));
   cout << "Magnitude B: " << magB << endl;
-  aTimesB = (vectAi * vectBi) + (vectAj * vectBj);
+  aTimesB = (vectAi * vectBi) + (vectAj * vectBj) + (vectAk * vectBk);
   cout << "The Dot Product: " << aTimesB << endl;
   input = ((aTimesB)/(magA * magB));
   result = (acos ( input )) * (180.0/PI);
