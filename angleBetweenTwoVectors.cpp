@@ -1,9 +1,12 @@
 /*
+  angleBetweenTwoVectors.cpp
+  June 12, 2017
+  Author: bernblend
+  Details:
   Calculate the angle between two vectors.
+  Simply enter the components of i(x), j(y) and k(z).
+  - bern
 */
-
-
-
 #include <iostream>
 #include <iomanip>
 #include <cmath>
@@ -15,15 +18,14 @@ double angleBetweenVectors(double vectAi, double vectAj, double vectAk, double v
   double aTimesB;
   double result;
   double input;
-  double PI = 3.1415926535897;
   magA = sqrt((vectAi * vectAi) + (vectAj * vectAj) + (vectAk * vectAk));
-  cout << "Magnitude A: " << magA << endl;
+  cout << "\nMagnitude A: " << magA << endl;
   magB = sqrt((vectBi * vectBi) + (vectBj * vectBj) + (vectBk * vectBk));
   cout << "Magnitude B: " << magB << endl;
   aTimesB = (vectAi * vectBi) + (vectAj * vectBj) + (vectAk * vectBk);
-  cout << "The Dot Product: " << aTimesB << endl;
+  cout << "\nThe Dot Product: " << aTimesB << endl;
   input = ((aTimesB)/(magA * magB));
-  result = (acos ( input )) * (180.0/PI);
+  result = (acos ( input ));
   return result;
 }
 int main(int argc, char const *argv[])
@@ -36,6 +38,7 @@ int main(int argc, char const *argv[])
   double vectBj;
   double vectBk;
   double angle;
+  double PI = 3.1415926535897;
   cout << "Vector A (i):" << endl;
   cin >> vectAi;
   cout << "Vector A (j):" << endl;
@@ -49,6 +52,8 @@ int main(int argc, char const *argv[])
   cout << "Vector B (k):" << endl;
   cin >> vectBk;
   angle = angleBetweenVectors(vectAi, vectAj, vectAk, vectBi, vectBj, vectBk);
-  std::cout << "The angle between the two vectors is: " << angle << '\n';
+  std::cout << "\nThe angle between the two vectors is: \n" << angle << " in radians." << '\n';
+  angle *= (180.0/PI);
+  std::cout << angle << " in degrees." << '\n';
   return 0;
 }
