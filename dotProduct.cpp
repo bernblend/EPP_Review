@@ -1,33 +1,16 @@
+/*
+  Calculate Scalar Product (Dot Product).
+*/
 #include <iostream>
 #include <iomanip>
 #include <cmath>
 using namespace std;
 
-
 double dotProduct(double vectAi, double vectAj, double vectBi, double vectBj)
 {
-  double magA;
-  double magB;
-  double aTimesB;
   double result;
-  double input;
-  double PI = 3.1415926535897;
 
-  magA = sqrt((vectAi * vectAi) + (vectAj * vectAj));
-
-  cout << magA << endl;
-
-  magB = sqrt((vectBi * vectBi)+(vectBj * vectBj));
-
-  cout << magB << endl;
-
-  aTimesB = (vectAi * vectBi) + (vectAj * vectBj);
-
-  cout << aTimesB << endl;
-
-  input = ((aTimesB)/(magA * magB));
-
-  result = (acos ( input )) * (180.0/PI);
+  result = (vectAi * vectBi) + (vectAj * vectBj);
 
   return result;
 }
@@ -40,7 +23,7 @@ int main(int argc, char const *argv[])
   double vectAj;
   double vectBi;
   double vectBj;
-  double angle;
+  double product;
 
   cout << "Vector A (i):" << endl;
   cin >> vectAi;
@@ -51,9 +34,9 @@ int main(int argc, char const *argv[])
   cout << "Vector B (j):" << endl;
   cin >> vectBj;
 
-  angle = dotProduct(vectAi, vectAj, vectBi, vectBj);
+  product = dotProduct(vectAi, vectAj, vectBi, vectBj);
 
-  std::cout << angle << '\n';
+  std::cout << "\nThe scalar product of the two vectors is: " << product << '\n';
 
   return 0;
 }
