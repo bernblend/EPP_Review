@@ -13,27 +13,27 @@ Program documentation.
 Correct and appropriate use in programs of the
 following:
 
-  standard control structures for
+  1. Standard control structures for
   assignment, selection, repetition functions.
 
-  input and output to and from text and binary files.
+  2. Input and output to and from text and binary files.
 
-  arrays and strings.
+  3. Arrays and strings.
 
-  pointers and dynamic variables.
+  4. Pointers and dynamic variables.
 
-  recursion.
+  5. Recursion.
 
-  classes and objects of the classes.
+  6. Classes and objects of the classes.
 
-  templates.
+  7. Templates.
 
-  operator overloading.
+  8. Operator overloading.
 
-  lists, stacks, queues, binary trees with both array
+  9. Lists, stacks, queues, binary trees with both array
   and linked list implementations.
 
-  searching and sorting.
+  10. Searching and sorting.
 
 
 
@@ -52,30 +52,16 @@ following:
 
 
 
+Categories: (Covered by DR)
 
+Linked Lists (Covered in 9 above)
 
-Categories:
+Arrays (Covered in 3 above)
 
+Binary Search Trees (Covered in 9 above)
 
-1. Linked Lists
+Recursion (Covered in 5 above)
 
+Classes (Covered in 6 above)
 
-
-2. Arrays
-
-
-
-3. Binary Search Trees
-
-
-
-4. Recursion
-
-
-
-5. Classes
-
-
-
-
-6. File I/O
+File I/O (Covered in 2 above)
