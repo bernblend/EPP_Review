@@ -1,12 +1,12 @@
 /*
-fortuneTeller.cpp
-May 23, 2014
-Peggy Fisher
+	fortuneTeller.cpp
+	June 12, 2014
+	bernblend
 */
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
-#include <fstream>
+#include <fstream>  //read, write and create file.
 #include <ctime>
 using namespace std;
 
@@ -32,13 +32,13 @@ int main()
 
 	cout<<"Think of a question for the fortune teller, "
 			"\npress enter for the answer "<<endl;
-	cin.ignore();
-	cout<<getRandomReply(answers,20)<<endl;
+	cin.ignore();  //Don't read in 'enter' from user as reply
+	cout << getRandomReply(answers,20) << endl;
 
 }
 string getRandomReply(string replies[],int size)
 {
 	srand(time(0));
-	int randomNum = rand()%20;
+	int randomNum = rand() % 20;  //random # 0-19
 	return replies[randomNum];
 }
