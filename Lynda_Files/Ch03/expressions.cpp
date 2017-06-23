@@ -1,7 +1,7 @@
 /*
-expressions.cpp
-May 21, 2014
-Peggy Fisher
+	expressions.cpp
+	June 22, 2017
+	bernblend
 */
 #include <iostream>
 using namespace std;
@@ -11,25 +11,32 @@ int main()
 	int radius, circleArea, circumference;
 	string firstName, lastName, fullName;
 
-	cout<<"Enter the length and width of a rectangle";
-	cin>>length;
-	cin>>width;
-	area = length*width;
-	perimeter = 2*length + 2*width;
-	cout<<"The area of the rectangle is: "<<area<<endl;
-	cout<<"The perimeter of the rectangle is: "<<perimeter<<endl;
+	cout << "\n";
+	cout << "Enter the length of a rectangle: ";
+	cin >> length;
+	cout << "\nEnter the width of a rectangle: ";
+	cin >> width;
+	area = length * width;
+	perimeter = 2 * length + 2 * width;
+	cout << "\n\nThe area of the rectangle is: " << area << endl;
+	cout << "\nThe perimeter of the rectangle is: " << perimeter << endl;
+	cout << "\n\n\n\n";
 
-	cout<<"Enter the radius of a circle:";
-	cin>>radius;
+	cout << "\nEnter the radius of a circle: ";
+	cin >> radius;
 	circleArea = 3.14 * radius * radius;
 	circumference = 2 * 3.14 * radius;
-	cout<<"The area of the circle is: "<<circleArea<<endl;
-	cout<<"The circumference of the circle is: "<<circumference<<endl;
+	cout << "\nThe area of the circle is: " << circleArea << endl;
+	cout << "\nThe circumference of the circle is: " << circumference << endl;
+	cout << "\n\n\n\n";
 
-	cout<<"Enter the first and last name"<<endl;
-	cin>>firstName;
-	cin>>lastName;
-	fullName = firstName + " " +lastName;
-	cout<<"The full name is: "<<fullName<<endl;
+	cout << "Enter the first name: ";
+	cin >> firstName;
+	cout << "\nEnter the last name: ";
+	cin >> lastName;
+	fullName = firstName + " " + lastName;
+	cout << "\nThe full name is: " << fullName<<endl;
+	cout << "\n";
 	return 0;
+
 }
