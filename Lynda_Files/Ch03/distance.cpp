@@ -1,7 +1,7 @@
 /*
-distance.cpp
-May 21, 2014
-Peggy Fisher
+	distance.cpp
+	June 23, 2017
+	bernblend
 */
 #include <iostream>
 #include <cmath>
@@ -18,16 +18,16 @@ int main()
 {
 	int x1, x2, y1, y2;
 
-	cout<<"Please enter the first point x1, then y1"<<endl;
-	cin>>x1;
-	cin>>y1;
+	cout << "Please enter the first point x1, then y1: " << endl;
+	cin >> x1;
+	cin >> y1;
 
-	cout<<"Now enter the second point"<<endl;
-	cin>>x2;
-	cin>>y2;
+	cout << "Now enter the second point: " << endl;
+	cin >> x2;
+	cin >> y2;
 
-	cout<<"The distance between these two points is: "<<
-			getDistance(x1,y1,x2,y2)<<endl;
+	cout << "The distance between these two points is: " <<
+			getDistance(x1,y1,x2,y2) << endl;
 
 	return 0;
 }
