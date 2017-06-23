@@ -1,17 +1,23 @@
 /*
-asciitable.cpp
-May 20, 2014
-Peggy Fisher
+	asciitable.cpp
+	June 22, 2017
+	bernblend
+
+	Prints number and corresponding ascii character.
 */
 #include <iostream>
 using namespace std;
 int main()
 {
 	char temp;
+	char a = 33;
 	for(int num = 0; num < 128; num++)
 	{
 		temp = num;
-		cout<<num<<" : "<<temp<<endl;
+		cout << num << " : " << temp << endl;
 	}
-return 0;
+
+	cout << a << endl;  //Prints exclamation at end.
+
+	return 0;
 }
