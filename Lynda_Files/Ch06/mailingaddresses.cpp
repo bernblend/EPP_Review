@@ -1,7 +1,7 @@
 /*
-mailingaddresses.cpp
-May 23, 2014
-Peggy Fisher
+	mailingaddresses.cpp
+	June 15, 2017
+	bernblend
 */
 #include <iostream>
 #include <fstream>
@@ -25,8 +25,8 @@ int main()
 	int numees;
 	string fullname;
 	string fname, lname;
-	cout<<"How many employees do you have? \n";
-	cin>>numees;
+	cout << "How many employees do you have? \n";
+	cin >> numees;
 	Address mailing[numees];
 
 	for(int i = 0;i < numees;i++)
@@ -50,7 +50,7 @@ int main()
 		cin>>mailing[i].zipcode;
 	}
 
-	writeToFile(mailing,numees);
+	writeToFile(mailing, numees);
 
 }
 
@@ -60,9 +60,9 @@ void writeToFile(Address m[], int size)
 	output.open("mailingaddress.txt", ios::out);
 	for(int i = 0; i < size; i++)
 	{
-		output<<m[i].fullName<<endl;
-		output<<m[i].houseNum<<" "<<m[i].streetName<<endl;
-		output<<m[i].city<<", "<<m[i].state<<" " <<m[i].zipcode<<endl;
+		output << m[i].fullName << endl;
+		output<<m[i].houseNum << " " << m[i].streetName<<endl;
+		output << m[i].city << ", " << m[i].state <<" " <<m[i].zipcode<<endl;
 		output<<endl;
 
 	}
