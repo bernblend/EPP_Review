@@ -43,8 +43,13 @@ following:
                 - data is defined as private.
                 - data is accessed using get and set methods (accessor and mutator methods).
 
-        
 
+        Static: Keeps track of data that applies to all
+                objects created from a class. When a
+                variable is defined as 'static' in the
+                header file, the cpu allows all instances
+                of the class to share the same memory
+                location of that ONE variable.
 
 
 
