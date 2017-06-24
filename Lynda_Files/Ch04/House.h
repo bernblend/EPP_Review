@@ -1,8 +1,9 @@
 /*
- * House.h
- *
- *  Created on: May 17, 2014
- *      Author: Peggy Fisher
+	House.h
+	June 24, 2017
+	bernblend
+
+	This is the header file.
  */
 #ifndef HOUSE_H_
 #define HOUSE_H_
@@ -10,13 +11,13 @@
 using namespace std;
 
 class House {
-private:
+private:             //instance data declared as private.
 	string houseColor;
 	int numBathrooms;
 	int numBedrooms;
 	double squareFeet;
 
-public:
+public:           //function protoypes declares as public.
 	//constructors
 	House();
 	House(string, int, int, double);
