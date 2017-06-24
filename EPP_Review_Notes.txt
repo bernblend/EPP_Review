@@ -26,6 +26,28 @@ following:
 
   6. Classes and objects of the classes.
 
+        Class - blueprint of an object.
+
+        Classes Contain:
+              -Instance data
+                - adjectives that describe a class.
+              -Constructor(s)
+                - functions used to create an instance of a class.
+              -Functions
+                - code common to all objects of the class.
+
+        Classes are:
+              -Reusable
+                - Multiple programs can use the same class.
+              -Encapsulate data
+                - data is defined as private.
+                - data is accessed using get and set methods (accessor and mutator methods).
+
+        
+
+
+
+
   7. Templates.
 
   8. Operator overloading.
@@ -65,3 +87,106 @@ Recursion (Covered in 5 above)
 Classes (Covered in 6 above)
 
 File I/O (Covered in 2 above)
+
+
+
+
+
+***************************************
+
+Using Predefined Functions:
+
+
+<string>
+    string getline()
+    int length()
+    string substr(int pos)
+    string substr(int start, int len)
+
+
+
+<cmath>
+    sqrt()
+    pow()
+    sin()
+    cos()
+    fabs()      abs value of a floating point
+
+
+
+<iomanip>
+    fixed          for trailing zeros
+    left, right      great for columns
+    setfill(char fillchar)     provides fill character
+    setprecision(int num)    how many decimal places
+    setw(int width)      how wide to allocate per variable
+
+
+
+
+<cstdlib>
+    int rand()      produce a random number
+    void srand(int num)     allows to see random number
+    int abs(int num)
+    void exit(int num)    terminate calling process
+
+  NOTE: rand() is a pseudorandom # generator - #'s repeat
+    So use a seed value (i.e. time)
+          srand(time(0));
+
+          number = rand() % 50 + 1;   //From 1-50.
+
+    General form (bounds a and b):
+          (rand() * (b - a + 1)) + a
+
+          Ex:    Die: rand() * 6 + 1;
+
+
+
+
+<cctype>                   check character
+    bool isalpha(char c)
+    bool isdigit(char c)
+    bool islower(char c)
+    bool isupper(char c)
+    bool isspace(char c)
+
+
+
+
+************************************************
+
+        CALL BY VALUE & CALL BY REFERENCE
+
+Call by value:
+    New space in memory is created.
+
+Call by reference:
+    Variable point to same space in memory.
+
+
+* Primitive datatypes are the ONLY ones that can do
+  call by value.
+
+
+***************************************************
+
+
+        DEFAULT ARGUMENTS
+
+Values used in functions will be the ones
+originally declared unless otherwise included
+when calling the function.
+
+
+***************************************************
+
+
+        OVERLOADING FUNCTIONS
+
+Two functions can have the same name as long as
+the list of parameters is different (different
+datatypes or different number of parameters).
+
+
+***************************************************
