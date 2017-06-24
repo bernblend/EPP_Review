@@ -1,17 +1,17 @@
 /*
- * House.cpp
- *
- *  Created on: May 17, 2014
- *      Author: Peggy Fisher
- */
+	House.cpp
+	June 24, 2017
+	bernblend
 
+	This is the class file and contains the body of the function protoypes listed in the header file.
+*/
 #include "House.h"
 #include <iostream>
-using namespace std;
 
+using namespace std;
 	//default constructor
-	House::House()
-	{
+	House::House()        //Scope resolution operator.
+	{											//Constructor belongs to Class.
 		houseColor = "Blue";
 		numBathrooms = 2;
 		numBedrooms = 3;
@@ -48,7 +48,7 @@ using namespace std;
 	{
 		return squareFeet;
 	}
-	
+
 	//mutator methods
 	void House::setColor(string c)
 	{
