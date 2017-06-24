@@ -1,9 +1,8 @@
 /*
- * hospitalstay.cpp
- *
- *  Created on: May 15, 2014
- *      Author: Peggy Fisher
- */
+	hospitalstay.cpp
+	June 23, 2017
+	bernblend
+*/
 
 #include <iostream>
 using namespace std;
@@ -18,29 +17,29 @@ int main()
 	bool inpatient = false;
 	char answer;
 
-	cout<<"Is this an inpatient stay?"<<endl;
-	cin>>answer;
+	cout << "Is this an inpatient stay?" << endl;
+	cin >> answer;
 	while(answer != 'y' && answer != 'n')
 	{
-		cout<<"Please enter y/n"<<endl;
-		cin>>answer;
+		cout << "Please enter y/n" << endl;
+		cin >> answer;
 	}
 	if(answer == 'y')
 		inpatient = true;
 	else
 		inpatient = false;
 
-	cout<<"Enter the total medication charges: "<<endl;
-	cin>>medCharges;
-	cout<<"Enter the total lab charges: "<<endl;
-	cin>>labCharges;
+	cout << "Enter the total medication charges: " << endl;
+	cin >> medCharges;
+	cout << "Enter the total lab charges: " << endl;
+	cin >> labCharges;
 
 	if(inpatient == true)
 	{
-		cout<<"please enter days spent in the hospital: "<<endl;
-		cin>>days;
-		cout<<"please enter the daily rate: "<<endl;
-		cin>>dailyRate;
+		cout << "please enter days spent in the hospital: " << endl;
+		cin >> days;
+		cout << "please enter the daily rate: " << endl;
+		cin >> dailyRate;
 
 		//call the function that takes 4 parameters
 		totalDue = calculateCharges(days, dailyRate,
@@ -52,15 +51,16 @@ int main()
 		totalDue = calculateCharges(medCharges, labCharges);
 	}
 
-	cout<<"The total cost is: $"<<totalDue<<endl;
+	cout << "The total cost is: $" << totalDue << endl;
+
 	return 0;
 }
 
 double calculateCharges(int d, double r, double m, double l)
 {
-	return d*r+m+l;
+	return d * r + m + l;
 }
 double calculateCharges(double m, double l)
 {
-	return m+l;
+	return m + l;
 }
