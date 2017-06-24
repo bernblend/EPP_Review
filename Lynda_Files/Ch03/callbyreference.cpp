@@ -11,7 +11,7 @@ using namespace std;
  * @param int a, int b
  */
 
-void addfive(int& a, int b)
+void addfive(int& a, int& b)
 {
 	cout << "entering addfive function" << endl;
 	cout << "a and b before adding 5: a=" << a << " b=" << b << endl << endl;
@@ -30,7 +30,7 @@ int main()
 	addfive(a,b);
 	cout << "a and b after calling addfive function: a=" << a << " b=" << b << endl;
 
-	cout << "NOTE: b in addfive() is not a reference variable. It creates a new memory space to save 20." << endl;
+	cout << "NOTE: Call by reference points to the same address in memory and therefore, no new space in memory is created." << endl;
 
 	return 0;
 }x
