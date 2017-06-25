@@ -31,14 +31,14 @@ void printHouse(House house)
 {
 	//print the house information using
 	//the dot operator
-	cout<<"House Color: "<<house.getColor()
-			<<"\nNumber Bathrooms: "
-			<<house.getNumBath()
-			<<"\nNumberBedrooms: "
-			<<house.getSqft()<<endl;
-	cout<<"Total Square feet: "
-			<<house.getSqft()<<endl;
-	cout<<endl<<endl;
+	cout << "House Color: " << house.getColor()
+			 << "\nNumber Bathrooms: "
+			<< house.getNumBath()
+			<< "\nNumberBedrooms: "
+				<< house.getSqft() << endl;
+	cout << "Total Square feet: "
+			<< house.getSqft() << endl;
+	cout << endl << endl;
 
 	//since it is a void function,
 	//I do not need a return statement
