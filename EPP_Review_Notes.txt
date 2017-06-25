@@ -51,6 +51,17 @@ following:
                 of the class to share the same memory
                 location of that ONE variable.
 
+        Encapsulation:
+            Class:
+              -private member
+                  Accessible ONLY to the functions that
+                  are members of the same class.
+              -public functions
+                  Accessible to the calling program.
+              -protected member
+                  Accessible to members of Classes that
+                  inherit from the Class.
+
 
 
   7. Templates.
