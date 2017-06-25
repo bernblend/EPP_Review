@@ -5,6 +5,7 @@
 */
 #include <iostream>
 #include "House.h"
+#include "House.cpp"    //Remember to include this one.
 #include <string>
 using namespace std;
 
