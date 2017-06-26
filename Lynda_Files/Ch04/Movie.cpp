@@ -1,13 +1,15 @@
 /*
- * Movie.cpp
- *
- *  Created on: May 23, 2014
- *      Author: Peggy Fisher
- */
+	Movie.cpp
+	June 25, 2017
+	bernblend
+
+	This is the Class file.
+*/
 
 #include "Movie.h"
 #include <iostream>
 using namespace std;
+
 //default constructor
 Movie::Movie() {
 	movieName = "";
@@ -17,13 +19,13 @@ Movie::Movie() {
 Movie::Movie(string name, int year, string rating)
 {
 	movieName = name;
-	while(year < 1950 || year > 2014)
+	while(year < 1950 || year > 2017)
 	{
-		cout<<"invalid year, please re-enter between 1950 and present: \n";
-		cin>>year;
-		cin.ignore();
+		cout << "Invalid year, please re-enter between 1950 and present: \n";
+		cin >> year;
+		cin.ignore();    //ignore user enter input.
 	}
-	this->year = year;
+	this->year = year;   //set object var = year (from arg).
 	this->rating = rating;
 }
 
@@ -44,10 +46,10 @@ int Movie::getYear()
 }
 void Movie::setYear(int year)
 {
-	while(year < 1950 || year > 2014)
+	while(year < 1950 || year > 2017)
 	{
-		cout<<"invalid year, please re-enter between 1950 and present: \n";
-		cin>>year;
+		cout << "Invalid year, please re-enter between 1950 and present: \n";
+		cin >> year;
 		cin.ignore();
 	}
 	this->year = year;
@@ -60,4 +62,3 @@ void Movie::setRating(string rating)
 {
 	this->rating = rating;
 }
-
