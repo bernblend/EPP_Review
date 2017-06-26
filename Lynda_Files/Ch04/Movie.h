@@ -1,9 +1,10 @@
 /*
- * Movie.h
- *
- *  Created on: May 23, 2014
- *      Author: Peggy Fisher
- */
+	Movie.h
+  June 25, 2017
+	bernblend
+
+	This is the header file.
+*/
 
 #ifndef MOVIE_H_
 #define MOVIE_H_
@@ -19,7 +20,9 @@ private:
 public:
 	Movie();
 	Movie(string, int, string);
+
 	~Movie();
+
 	void setName(string);
 	string getName();
 	void setYear(int);
@@ -29,4 +32,3 @@ public:
 };
 
 #endif /* MOVIE_H_ */
-
