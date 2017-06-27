@@ -1,7 +1,7 @@
 /*
-arrays.cpp
-May 22, 2014
-Peggy Fisher
+	arrays.cpp
+	June 25, 2017
+	bernblend
 */
 #include <iostream>
 #include <string>
@@ -13,7 +13,7 @@ int main()
 	//array declarations
 	string seasons[4];
 	int numbers[10];
-	for(int i = 0;i<10;i++)
+	for(int i = 0;i < 10;i++)
 	{
 		numbers[i] = rand();
 	}
@@ -27,10 +27,12 @@ int main()
 	seasons[2] = "winter";
 	seasons[3] = "spring";
 
-	cout<<seasons<<endl;
-	cout<<seasons[0]<<endl;
-	cout<<seasons[1]<<endl;
-	cout<<seasons[2]<<endl;
-	cout<<seasons[3]<<endl;
+	cout << seasons << endl;
+	cout << seasons[0] << endl;
+	cout << seasons[1] << endl;
+	cout << seasons[2] << endl;
+	cout << seasons[3] << endl;
+
 	return 0;
+
 }
