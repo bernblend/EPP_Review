@@ -124,11 +124,13 @@ following:
 
           -can contain other struct data types and arrays.
 
-        Thins to Remember:
+        Things to Remember:
 
           -to access data members, use dot operator.
 
           -to compare, must compare each data member.
+
+          -can be initialized when created.
 
   10. Searching and sorting.
 
