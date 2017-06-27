@@ -19,7 +19,7 @@ int main(int argc, char const *argv[]) {
 
   ofstream fout;//Create an instance of ofstream class for output
   fout.open("jobs.txt");//Open file for writing.
-  fout<<"JOB #\t\t\thoursOrPatients\t\t\tRate\t\t\tFinal Total Pay\n"; //Write first line of table
+  fout << "JOB #" << setw(18) << right << "hoursOrPatients" << setw(11) << "Rate" << setw(22) << "Final Total Pay\n"; //Write first line of table
 
   char answer = 'y';
   do {
@@ -32,12 +32,15 @@ int main(int argc, char const *argv[]) {
     jobs[i].setPay(horp, r);
     totalPay(jobs[i]);
     allpays += jobs[i].getPay(); //Increment the value of all pays
-    fout<<i+1<<"\t\t\t\t\t\t\t\t"<<horp<<"\t\t\t\t\t\t\t\t"<<r<<"\t\t\t\t\t\t\t\t"<<jobs[i].getPay()<<"\n"; //Write rest of lines to text file
+    fout << i+1 << fixed << setprecision(2) << setw(14) << horp << setw(20) << r << setw(13) << "$" << jobs[i].getPay()<<"\n"; //Write rest of lines to text file
     i++;
     cout << "\n\nDo you have another transaction? ";
     cin >> answer;
   } while(answer == 'y');
   cout << "\n\nThe total pay of ALL JOBS is: $" << fixed << setprecision(2) << allpays << "\n\nHave a FANTASTIC day!\n\n\n" << setw(20)  << right << "-bern\n" << "\n";//Print the value of allpays
+
+  fout << "\n\nThe total pay of ALL JOBS is: $" << fixed << setprecision(2) << allpays << "\n\nHave a FANTASTIC day!\n\n\n" << setw(20)  << right << "-bern\n" << "\n";
+
   return 0;
 }
 void totalPay(Job job)
