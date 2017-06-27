@@ -20,6 +20,53 @@ following:
 
   3. Arrays and strings.
 
+        Array Syntax:
+
+          datatype var[SIZE or initializer list]
+
+        Array to a Function:
+
+          Pass the name of array and int value with
+          size of the array.
+
+        Array from a Function:
+
+          Array may be return type of a function.
+
+          Because arrays are actually pointers to data in
+          storage, when an array is passed as an
+          argument, it's automatically a call by
+          reference.
+
+        Access to Arrays:
+
+          -Must use index value.
+
+          -Creates a reference variable.
+
+          -int number[] = {1,2,3,4,5};
+
+        Things to Remember:
+
+          -Must have a size or an initializer list.
+
+          -Fixed size.
+
+          -Reference variables.
+
+          -Beware of bounds errors.
+
+        More Arrays:
+
+          -Lists of numbers, prices, names.
+
+          -Two-dimensional arrays (more columns).
+
+          -Parallel arrays (use data with diff datatype).
+
+          -Arrays of objects (use to save variable use).
+
+
   4. Pointers and dynamic variables.
 
   5. Recursion.
@@ -70,6 +117,18 @@ following:
 
   9. Lists, stacks, queues, binary trees with both array
   and linked list implementations.
+
+        Abstract Data Types:
+
+          -consists of one or many other data types.
+
+          -can contain other struct data types and arrays.
+
+        Thins to Remember:
+
+          -to access data members, use dot operator.
+
+          -to compare, must compare each data member.
 
   10. Searching and sorting.
 
