@@ -25,4 +25,4 @@ Information on the Exam in Programming Proficiency and CPSC 301
 * Polymorphism
 * Virtual functions
 
-More Info [link](http://www.fullerton.edu/ecs/cs/_resources/pdf/CS301Info.pdf)
+[More Info](http://www.fullerton.edu/ecs/cs/_resources/pdf/CS301Info.pdf)
