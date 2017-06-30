@@ -29,7 +29,7 @@ int main(int argc, char const *argv[]) {
   cout << number[48] << endl;
   cout << number[49] << endl;
   cout << number[50] << endl;
-
+  
   cout << "The greatest number randomly produced was: " << fixed << setw(15) << setprecision(2) << findGreatest(number, 50) << endl;
 
   return 0;
