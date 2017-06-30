@@ -13,8 +13,8 @@ double findTallest(double[], int);
 
 int main()
 {
-	double heights[10];
-	getHeights(heights, 10);
+	double heights[10];     //create array
+	getHeights(heights, 10);   //pass array as argument
 	cout << "The average height of all students is: "
 			 << findAverage(heights, 10) << " inches" << endl;
 	cout << "The tallest student is: "
