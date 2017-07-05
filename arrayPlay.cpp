@@ -22,15 +22,17 @@ int main(int argc, char const *argv[]) {
 
     number[i] = rand();
 
-    cout << fixed << i << setw(15) << setprecision(2) << number[i] << i << setw(15) << setprecision(2) << number[i] << i << setw(15) << setprecision(2) << number[i] << endl;
+    //'fixed' - the value is represented with exactly as many digits in the decimal part as specified by the precision field (precision) and with no exponent part.
+
+    cout << fixed << i << setw(15) << setprecision(2) << number[i] << "\t" << i << setw(15) << number[i] << "\t" << i << setw(15) << number[i] << endl;
 
   }
 
   cout << number[48] << endl;
   cout << number[49] << endl;
   cout << number[50] << endl;
-  
-  cout << "The greatest number randomly produced was: " << fixed << setw(15) << setprecision(2) << findGreatest(number, 50) << endl;
+
+  cout << "The greatest number randomly produced was: " << fixed << setw(15) << findGreatest(number, 50) << endl;
 
   return 0;
 }
