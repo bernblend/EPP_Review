@@ -91,6 +91,53 @@ following:
         //then you can use the value of the pointer.
         *numPtr += 5;
 
+        Dynamic variables - Vectors
+
+        Vectors - Like an array list from Java.
+          NOT a fixed size and can grow in size.
+
+        Use   #include <vector>    directive.
+
+        Creating Vectors:
+
+          -empty vectors
+          -initial size
+          -initial size & initial value for each element.
+
+        When adding a variable to an empty vector you
+        must use the 'pushback' command. The item is
+        automatically added to the end of the vector.
+        (i.e. carVins.push_back(vin); )
+
+        You can then use the vector as an array:
+        for(int i = 0; i < num.size(); i++)
+      	{
+      		num[i] = rand();
+      	}
+
+
+        //Other vector functions include:
+      	//.at returns the value located at element 0
+      	int value = num.at(0);
+
+      	//.capacity() returns the max number of elements
+      	//that may be stored
+      	//without adding additional memory
+      	int value2 = num.capacity();
+
+      	//.pop_back removes the last element from a vector
+      	num.pop_back();
+
+      	//.clear() is used to clear a vector of all elements
+      	num.clear();
+
+      	//.empty() returns true if vector is empty
+      	if(num.empty() == true)
+      		cout << "vector num is empty\n";
+
+      	//.swap(vector2) swaps the contents
+
+
 
 
   5. Recursion.
@@ -293,7 +340,7 @@ Call by value:
     New space in memory is created.
 
 Call by reference:
-    Variable point to same space in memory.
+    Two variable point to same space in memory.
 
 
 * Primitive datatypes are the ONLY ones that can do
