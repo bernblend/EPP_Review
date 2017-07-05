@@ -37,37 +37,38 @@ void printEes(Employee[],int);
 int main()
 {
 	int numEmployees;
-	cout<<"How many employees do you have? \n";
-	cin>>numEmployees;
+	cout << "How many employees do you have? \n";
+	cin >> numEmployees;
 	//create an array of type Employee
 	Employee employees[numEmployees];
 
 	//loop for creating new employee data structure variables
-	for(int i = 0;i < numEmployees;i++)
+	for(int i = 0; i < numEmployees; i++)
 	{
-		cout<<"Please enter first name: \n";
-		cin>>employees[i].firstName;
-		cout<<"Enter last name: \n";
-		cin>>employees[i].lastName;
-		cout<<"Enter employee id: \n";
-		cin>>employees[i].eeNumber;
-		cout<<"Enter hourly wage: \n";
-		cin>>employees[i].hourlyWage;
-		cout<<"Enter house number: \n";
-		cin>>employees[i].homeAddress.houseNum;
-		cin.ignore();
-		cout<<"Enter street name: \n";
+		cout << "Please enter first name: \n";
+		cin >> employees[i].firstName;
+		cout << "Enter last name: \n";
+		cin >> employees[i].lastName;
+		cout << "Enter employee id: \n";
+		cin >> employees[i].eeNumber;
+		cout << "Enter hourly wage: \n";
+		cin >> employees[i].hourlyWage;
+		cout << "Enter house number: \n";
+		cin >> employees[i].homeAddress.houseNum;
+		cin.ignore();   //ignore enter
+		cout << "Enter street name: \n";
 		cin.getline(employees[i].homeAddress.streetName, 30);
-		cout<<"Enter city: \n";
-		cin>>employees[i].homeAddress.city;
-		cout<<"Enter state: \n";
-		cin>>employees[i].homeAddress.state;
-		cout<<"Enter zipcode: \n";
-		cin>>employees[i].homeAddress.zipcode;
-		cout<<"Enter birth month, day and year:  \n";
-		cin>>employees[i].dob.month;
-		cin>>employees[i].dob.day;
-		cin>>employees[i].dob.year;
+		//cin.getline() allows to read in spaces from stream.
+		cout << "Enter city: \n";
+		cin >> employees[i].homeAddress.city;
+		cout << "Enter state: \n";
+		cin >> employees[i].homeAddress.state;
+		cout << "Enter zipcode: \n";
+		cin >> employees[i].homeAddress.zipcode;
+		cout << "Enter birth month, day and year:  \n";
+		cin >> employees[i].dob.month;
+		cin >> employees[i].dob.day;
+		cin >> employees[i].dob.year;
 	}
 
 	printEes(employees,numEmployees);
