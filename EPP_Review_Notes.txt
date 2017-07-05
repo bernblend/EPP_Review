@@ -69,6 +69,30 @@ following:
 
   4. Pointers and dynamic variables.
 
+        Pointer - datatype that contains the address of a value in memory.
+
+        POINTERS can be used to SHARE VALUES among diff parts of a program. (see pointer.cpp)
+
+          Example:
+
+            int JohnsAcct = 12345;
+            int* acctPtr = &JohnsAcct;
+
+            NOTE: The '&' finds the address of where John's account is stored in memory, you then get THAT VALUE in the POINTER.
+
+        To print a value using a pointer is by
+        'de-referencing' the pointer with the asterisk
+        (i.e. *acctPtr ).
+
+        REMEMBER: When assigning a value to a pointer,
+        make sure the value is an address.
+        //lets add a pointer to hold the address of num
+        int* numPtr = &num;
+        //then you can use the value of the pointer.
+        *numPtr += 5;
+
+
+
   5. Recursion.
 
   6. Classes and objects of the classes.
@@ -120,6 +144,8 @@ following:
 
         Abstract Data Types:
 
+          DIFFERENT from Classes since they do NOT include any function definitions, they only group DATA items.
+
           -consists of one or many other data types.
 
           -can contain other struct data types and arrays.
@@ -131,6 +157,34 @@ following:
           -to compare, must compare each data member.
 
           -can be initialized when created.
+
+          * Data Structures allow the grouping of many datatypes (int, string, double, etc.) into one data type. Like in the case below for datatype: employee. (refer to employees.cpp)
+
+          Example:
+
+            struct Address
+            {
+              char houseNum[5];
+              char streetName[30];
+              char city[30];
+              char state[3];
+              int zipcode;
+            };
+            struct DateOfBirth
+            {
+              int month;
+              int day;
+              int year;
+            };
+            struct Employee
+            {
+              char firstName[30];
+              char lastName[30];
+              int eeNumber;
+              double hourlyWage;
+              Address homeAddress;
+              DateOfBirth dob;
+            };
 
   10. Searching and sorting.
 
@@ -267,3 +321,27 @@ datatypes or different number of parameters).
 
 
 ***************************************************
+
+
+
+****
+
+     cin.ignore()    AND     cin.getline()
+
+
+
+cin.ignore()
+
+    Used to ignore the end line symbol from previous cout statement (user presses enter).
+
+
+cin.getline()
+
+    Allows to read in a stream with spaces until the user presses enter (up to the initialized amount of the array).
+
+
+
+
+
+
+******
