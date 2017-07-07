@@ -1,7 +1,7 @@
 /*
-vectors.cpp
-May 23, 2014
-Peggy Fisher
+	vectors.cpp
+	July 4, 2017
+	bernblend
 */
 #include <iostream>
 #include <vector>
@@ -24,21 +24,21 @@ int main()
 	int numCars;
 	int vin;
 
-	cout<<"How many cars are in the showroom?\n";
-	cin>>numCars;
-	for(int i = 0; i<numCars; i++)
+	cout << "How many cars are in the showroom?\n";
+	cin >> numCars;
+	for(int i = 0; i < numCars; i++)
 	{
-		cout<<"Enter the vin for car "<<i+1<<" :";
-		cin>>vin;
+		cout << "Enter the vin for car " << i + 1 << " :";
+		cin >> vin;
 		//add the new vin to the end of the vector
 		carVins.push_back(vin);
 	}
 
 	//print the vins:
-	cout<<"\nVin numbers for cars in showroom:\n";
-	for(int i = 0; i<carVins.size();i++)
+	cout << "\nVin numbers for cars in showroom:\n";
+	for(int i = 0; i < carVins.size(); i++)
 	{
-		cout<<carVins[i]<<endl;
+		cout << carVins[i] << endl;
 	}
 
 	//add 10 random integers to the num vector
@@ -49,30 +49,38 @@ int main()
 	}
 
 	//print the random numbers:
-	cout<<"\n10 random integers: \n";
-	for(int i = 0; i<num.size();i++)
+	cout << "\n10 random integers: \n";
+	for(int i = 0; i < num.size(); i++)
 	{
-		cout<<num[i]<<endl;
+		cout << num[i] << endl;
 	}
 
 	//Other vector functions include:
 	//.at returns the value located at element 0
 	int value = num.at(0);
 
+	cout << value << endl;
+
 	//.capacity() returns the max number of elements
 	//that may be stored
 	//without adding additional memory
 	int value2 = num.capacity();
 
+	cout << value2 << endl;
+
 	//.pop_back removes the last element from a vector
 	num.pop_back();
+
+	cout << value << endl;
+
+	cout << value2 << endl;
 
 	//.clear() is used to clear a vector of all elements
 	num.clear();
 
 	//.empty() returns true if vector is empty
-	if(num.empty()==true)
-		cout<<"vector num is empty\n";
+	if(num.empty() == true)
+		cout << "vector num is empty\n";
 
 	//.swap(vector2) swaps the contents
 
