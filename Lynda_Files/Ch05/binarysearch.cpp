@@ -49,7 +49,7 @@ int main()
 		cout << "index after for: " << index << endl;
 		cout << "j after for: " << j << endl;
 
-		int temp = nums[j];
+		int temp = nums[j];   //set temporary from j
 		nums[j] = nums[index];
 		nums[index] = temp;
 	}
