@@ -1,7 +1,7 @@
 /*
-binarysearch.cpp
-May 23, 2014
-Peggy Fisher
+	binarysearch.cpp
+	June 5, 2017
+	bernblend
 */
 #include <iostream>
 #include <ctime>
@@ -16,44 +16,59 @@ int main()
 	int nums[10];
 	for(int i = 0;i<10;i++)
 	{
-		nums[i] = rand()%100 + 1;
+		nums[i] = rand() % 100 + 1;
 	}
-	cout<<"Array before sort"<<endl;
-		for(int i = 0; i<10;i++)
-			cout<<nums[i]<<" ";
-		cout<<endl;
+	cout << "Array before sort" << endl;
+		for(int i = 0; i < 10; i++)
+			cout << nums[i] << " "; //allows #'s on one line.
+		cout << endl;    //this is the actual end of the line.
 
 	//sort the array using a selection sort
-	for(int j=0; j<10; j++)
+	for(int j = 0; j < 10; j++)
 	{
 		int index = j;
-		for(int k=j; k<10; k++)
+		cout << "index before for: " << index << endl;
+		cout << "j before for: " << j << endl;
+		for(int k = j; k < 10; k++)
 		{
-			if(nums[index]>nums[k])
+			cout << "index inside for: " << index << endl;
+			cout << "j inside for: " << j << endl;
+			cout << "k inside for: " << k << endl;
+			if(nums[index] > nums[k]) //1st run: k=1 && index=0
 			{
-				index = k;
-			}
+				cout << "index inside if b4: " << index << endl;
+				cout << "j inside if b4: " << j << endl;
+				cout << "k inside if b4: " << k << endl;
+				index = k;   //1st run: k=1 && index=1
+				cout << "index inside if after: " << index << endl;
+				cout << "j inside if after: " << j << endl;
+				cout << "k inside for after: " << k << endl;
+			}  //1st run: k=1 && index=1 && j=0
 		}
+
+		cout << "index after for: " << index << endl;
+		cout << "j after for: " << j << endl;
+
 		int temp = nums[j];
 		nums[j] = nums[index];
 		nums[index] = temp;
 	}
-	cout<<"Array after sort"<<endl;
-	for(int i = 0; i<10;i++)
-		cout<<nums[i]<<" ";
-	cout<<endl;
+	cout << "Array after sort" << endl;
+	for(int i = 0; i < 10; i++)
+		cout << nums[i] << " ";  //allows #'s on one line.
+	cout << endl;     //this is the actual end of the line.
 
 	int value;
-		cout<<"Enter a number between 1 and 100: "<<endl;
-		cin>>value;
+		cout << "Enter a number between 1 and 100: " << endl;
+		cin >> value;
 
 	if(search(nums, 10, value)== true)
 	{
-		cout<<"Value "<<value<<" was found\n";
+		cout << "Value " << value << " was found\n";
 	}
 	else
 	{
-		cout<<"Value "<<value<<" was not found\n";
+		cout << "Value " << value << " was not found\n";
 	}
 }
 bool search(int numbers[], int size, int value)
@@ -82,4 +97,3 @@ bool search(int numbers[], int size, int value)
 	}
 	return found;
 }
-
