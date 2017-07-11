@@ -14,7 +14,7 @@ int main()
 {
 	srand(time(0));
 	int nums[10];
-	for(int i = 0;i<10;i++)
+	for(int i = 0; i<10; i++)
 	{
 		nums[i] = rand() % 100 + 1;
 	}
@@ -27,31 +27,41 @@ int main()
 	for(int j = 0; j < 10; j++)
 	{
 		int index = j;
-		cout << "index before for: " << index << endl;
-		cout << "j before for: " << j << endl;
+		cout << "index is the lowest value : " << index << endl;
+		cout << "j says now I'm: " << j << endl;
 		for(int k = j; k < 10; k++)
 		{
-			cout << "index inside for: " << index << endl;
-			cout << "j inside for: " << j << endl;
-			cout << "k inside for: " << k << endl;
+			cout << "  index is the lowest value: " << index << endl;
+			cout << "  j is element we are setting: " << j << endl;
+			cout << "  k will now check element: " << k << endl;
+
+			cout << "    if (nums[index] > nums[k]) " << endl;
+
 			if(nums[index] > nums[k]) //1st run: k=1 && index=0
 			{
-				cout << "index inside if b4: " << index << endl;
-				cout << "j inside if b4: " << j << endl;
-				cout << "k inside if b4: " << k << endl;
+
 				index = k;   //1st run: k=1 && index=1
-				cout << "index inside if after: " << index << endl;
-				cout << "j inside if after: " << j << endl;
-				cout << "k inside for after: " << k << endl;
+				cout << "        index set from k (new lowest): " << index << endl;
+				cout << "        j stays the same: " << j << endl;
+				cout << "        k gave value to index: " << k << endl;
 			}  //1st run: k=1 && index=1 && j=0
 		}
 
-		cout << "index after for: " << index << endl;
-		cout << "j after for: " << j << endl;
+		cout << "          index after for b4 temp: " << index << endl;
+		cout << "          j after for b4 temp: " << j << endl;
 
-		int temp = nums[j];   //set temporary from j
-		nums[j] = nums[index];
-		nums[index] = temp;
+		int temp = nums[j];    // j runs thru 0 - 9
+		cout << "            index after temp set: " << index << endl;
+		cout << "            j after temp set: " << j << endl;
+		cout << "            temp after temp set: " << index << endl;
+		nums[j] = nums[index];  //value of index & j switch.
+		cout << "              index after index to j: " << index << endl;
+		cout << "              j after index to j: " << j << endl;
+		cout << "              temp after index to j: " << index << endl;
+		nums[index] = temp; //switch first element with index.
+		cout << "                index after temp to index: " << index << endl;
+		cout << "                j after temp to index: " << j << endl;
+		cout << "                temp after temp to index: " << index << endl;
 	}
 	cout << "Array after sort" << endl;
 	for(int i = 0; i < 10; i++)
