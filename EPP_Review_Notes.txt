@@ -301,6 +301,21 @@ following:
             		nums[index] = temp;
             	}
 
+              Algorithm Variables:
+                j is used for overall final element count.
+                index is the current (smallest) value.
+                k refers to the next value in sequence.
+
+              Algorithm Sample:
+                j tells k to check each element and find
+                the lowest value (index) and to switch
+                the current j value with the index.
+                j will set the final sorted list and
+                index gets updated to current j each
+                loop (0-9) anyhow. 
+
+
+
           Insertion:
 
           Bubble:
