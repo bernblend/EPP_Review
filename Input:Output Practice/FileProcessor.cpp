@@ -19,7 +19,7 @@ void randomText();
  */
 
 int main() {
-    
+    practiceMet();
 }
 
 
