@@ -23,6 +23,8 @@ int main()
 			cout << nums[i] << " "; //allows #'s on one line.
 		cout << endl;    //this is the actual end of the line.
 
+
+
 	//sort the array using a selection sort
 	for(int j = 0; j < 10; j++)
 	{
@@ -43,9 +45,13 @@ int main()
 		cout << nums[i] << " ";  //allows #'s on one line.
 	cout << endl;     //this is the actual end of the line.
 
+
+
 	int value;
 		cout << "Enter a number between 1 and 100: " << endl;
 		cin >> value;
+
+
 
 	if(search(nums, 10, value)== true)
 	{
@@ -56,6 +62,9 @@ int main()
 		cout << "Sorry, value " << value << " was NOT found.\n";
 	}
 }
+
+
+
 bool search(int numbers[], int size, int value)
 {
 	//to use a binary search, the array must
@@ -67,17 +76,24 @@ bool search(int numbers[], int size, int value)
 	while(low <= high && !found)
 	{
 		pos = (low + high)/2;
+
 		if(numbers[pos] == value)
 		{
+
 			found = true;
+
 		}
 		else if(numbers[pos] < value)
 			{
-				low = pos+1;
+
+				low = pos + 1;
+
 			}
 			else
 			{
+
 				high = pos - 1;
+				
 			}
 	}
 	return found;
