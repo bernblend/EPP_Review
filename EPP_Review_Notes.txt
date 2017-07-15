@@ -142,6 +142,7 @@ following:
 
   5. Recursion.
 
+
   6. Classes and objects of the classes.
 
         Class - blueprint of an object.
@@ -184,7 +185,9 @@ following:
 
   7. Templates.
 
+
   8. Operator overloading.
+
 
   9. Lists, stacks, queues, binary trees with both array
   and linked list implementations.
@@ -280,6 +283,7 @@ following:
 
       Types of Sorting:
 
+
           Selection: Searches for smallest element of
               the array and placing it in the beginning.
 
@@ -320,6 +324,9 @@ following:
 
 
           Insertion:
+              
+
+
 
           Bubble:
 
