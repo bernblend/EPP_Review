@@ -81,6 +81,7 @@ int main()
 		cout << "Value " << value << " was not found\n";
 	}
 }
+
 bool search(int numbers[], int size, int value)
 {
 	//to use a binary search, the array must
@@ -89,20 +90,50 @@ bool search(int numbers[], int size, int value)
 	int low = 0;
 	int high = size - 1;
 	int pos = 0;
+	cout << "high before while: " << high << endl;
+	cout << "found before while: " << found << endl;
 	while(low <= high && !found)
 	{
 		pos = (low + high)/2;
+		cout << "high inside while: " << high << endl;
+		cout << "low inside while: " << low << endl;
+		cout << "pos inside while: " << pos << endl;
+
 		if(numbers[pos] == value)
 		{
+			cout << "numbers[pos] inside if: " << numbers[pos] << endl;
+			cout << "high inside if: " << high << endl;
+			cout << "low inside if: " << low << endl;
+			cout << "found before if: " << found << endl;
 			found = true;
+			cout << "numbers[pos] inside if after found = true: " << numbers[pos] << endl;
+			cout << "high after found = true: " << high << endl;
+			cout << "low after found = true: " << low << endl;
+			cout << "found after found = true: " << found << endl;
 		}
 		else if(numbers[pos] < value)
 			{
-				low = pos+1;
+				cout << "numbers[pos] inside else if: " << numbers[pos] << endl;
+				cout << "high inside else if: " << high << endl;
+				cout << "low inside else if: " << low << endl;
+				cout << "found inside else if: " << found << endl;
+				low = pos + 1;
+				cout << "numbers[pos] inside else if after: " << numbers[pos] << endl;
+				cout << "high inside else if after: " << high << endl;
+				cout << "low inside else if after: " << low << endl;
+				cout << "found inside else if after: " << found << endl;
 			}
 			else
 			{
+				cout << "numbers[pos] inside else: " << numbers[pos] << endl;
+				cout << "high inside else: " << high << endl;
+				cout << "low inside else: " << low << endl;
+				cout << "found before else: " << found << endl;
 				high = pos - 1;
+				cout << "nums[pos] inside else after: " << numbers[pos] << endl;
+				cout << "high inside else after: " << high << endl;
+				cout << "low inside else after: " << low << endl;
+				cout << "found before else after: " << found << endl;
 			}
 	}
 	return found;
