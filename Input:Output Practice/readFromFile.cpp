@@ -11,17 +11,34 @@
 
 using namespace std;
 
-string getSuperBowl(string [], int);
+string removeSpaces(string);
 
 int main()
 {
   ifstream inputfile;
+  int num;
 
-  inputfile.open("superBowlList.txt", ios::in);
+  inputfile.open("SuperBowlList.txt", ios::in);
 
   char superbowl[100];
-  string superbowls[50];
+  string superbowls[52];
   int pos = 0;
+
+  while(!inputfile.eof())
+  {
+    inputfile.getline(superbowl, 100);
+    superbowls[pos] = superbowl;
+    pos++;
+  }
+
+  while(num != -1)
+  {
+    cout << "Which Super Bowl would you like to look up?" << endl;
+    cin >> num;
+
+    cout << superbowls[num - 1] << "\n" << endl;
+  }
+
 
   return 0;
 }
