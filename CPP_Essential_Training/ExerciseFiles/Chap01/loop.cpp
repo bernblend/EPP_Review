@@ -1,4 +1,8 @@
-// loop.cpp by Bill Weinman <http://bw.org/>
+/*
+  loop.cpp
+  July 19, 2017
+  bernblend
+*/
 #include <cstdio>
 using namespace std;
 
