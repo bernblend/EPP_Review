@@ -16,7 +16,7 @@ int main()
 {
 	ifstream inputfile;
 	//declare an input file
-	inputfile.open("replies.txt", ios::in);
+	inputfile.open("replies.txt", ios::in);  //reading data in from this file
 
 	char answer[30];
 	string answers[20];
