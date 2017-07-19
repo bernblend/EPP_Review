@@ -29,25 +29,25 @@ int main()
 	cin >> numees;
 	Address mailing[numees];
 
-	for(int i = 0;i < numees;i++)
+	for(int i = 0;i < numees; i++)
 	{
-		cout<<"Please enter first name: \n";
-		cin>>fname;
-		cout<<"Enter last name: \n";
-		cin>>lname;
+		cout << "Please enter first name: \n";
+		cin >> fname;
+		cout << "Enter last name: \n";
+		cin >> lname;
 		fullname = fname + " " + lname;
 		mailing[i].fullName = fullname;
-		cout<<"Enter house number: \n";
-		cin>>mailing[i].houseNum;
+		cout << "Enter house number: \n";
+		cin >> mailing[i].houseNum;
 		cin.ignore();
-		cout<<"Enter street name: \n";
+		cout << "Enter street name: \n";
 		cin.getline(mailing[i].streetName, 30);
-		cout<<"Enter city: \n";
-		cin>>mailing[i].city;
-		cout<<"Enter state: \n";
-		cin>>mailing[i].state;
-		cout<<"Enter zipcode: \n";
-		cin>>mailing[i].zipcode;
+		cout << "Enter city: \n";
+		cin >> mailing[i].city;
+		cout << "Enter state: \n";
+		cin >> mailing[i].state;
+		cout << "Enter zipcode: \n";
+		cin >> mailing[i].zipcode;
 	}
 
 	writeToFile(mailing, numees);
@@ -61,9 +61,9 @@ void writeToFile(Address m[], int size)
 	for(int i = 0; i < size; i++)
 	{
 		output << m[i].fullName << endl;
-		output<<m[i].houseNum << " " << m[i].streetName<<endl;
-		output << m[i].city << ", " << m[i].state <<" " <<m[i].zipcode<<endl;
-		output<<endl;
+		output << m[i].houseNum << " " << m[i].streetName<<endl;
+		output << m[i].city << ", " << m[i].state << " " << m[i].zipcode<<endl;
+		output << endl;
 
 	}
 }
