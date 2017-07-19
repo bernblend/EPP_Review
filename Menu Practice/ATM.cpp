@@ -50,10 +50,10 @@ void ATM::deposit(float deposit){
 void ATM::withdraw(float withdraw){
   if(this->balance <= 0.0){
     cout << "Insuffecent Funds" << endl;
-  }else if ((withdraw - this->balance) < 0.0) {
+  }else if ((this->balance - withdraw) < 0.0) {
     this->lastWithdraw = this->balance;
     setBalance(0.0);
   }else{
-    setBalance(withdraw - this->balance);
+    setBalance(this->balance - withdraw);
   }
 }
