@@ -55,7 +55,7 @@ string line = "";
 
 // Check if file is open
 if (!input.is_open()) {
-    cout << "Error couldn\'t open! ";
+    cout << "Error  couldn\'t  open! ";
 }else {
     //
     while (getline(input,line, '\n')) {
