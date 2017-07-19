@@ -1,5 +1,12 @@
-// cpp11.cpp by Bill Weinman <http://bw.org/>
-// test for modern C++ compiler
+/*
+  cpp11.cpp
+  July 19, 2017
+  bernblend
+
+  Test for modern C++ compiler
+*/
+
+
 #include <cstdio>
 using namespace std;
 
@@ -9,5 +16,6 @@ int main( int argc, char ** argv )
     for( auto i : ia ) {
         printf("i is %d\n", i);
     }
+    
     return 0;
 }
