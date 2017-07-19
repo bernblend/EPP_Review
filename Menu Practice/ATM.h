@@ -9,7 +9,8 @@ class ATM {
 
   // Private Members
 private:
-  string name;
+  string firstName;
+  string lastName;
   string accountNumber;
   float balance;
   float lastDeposit;
@@ -18,15 +19,18 @@ private:
 public:
   // Constructors
   ATM();
-  ATM(string,string,float);
+  ATM(string,string,string,float);
 
   // Setters
-  void setName(string);
+  void setFirstName(string);
+  void setLastName(string);
   void setAccountNumber(string);
   void setBalance(float);
 
   // Getters
   string getName();
+  string getFirstName();
+  string getLastName();
   string getAccountNumber();
   float getBalance();
 

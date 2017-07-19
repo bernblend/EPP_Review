@@ -7,12 +7,14 @@ using namespace std;
 void printAccount(ATM account);
 void askAccountDetails(ATM account);
 void archiveAccounts(ATM* accounts);
+ATM* grabAccounts();
+void updateAccount(ATM account,ATM* accounts);
 
 
 int main(int argc, char const *argv[]) {
 
-    int numOfAccounts = 10;
-    ATM* accounts = new ATM[numOfAccounts];
+    int numOfAccounts = 100;
+    ATM* accounts = grabAccounts();
     int input;
 
     do {
@@ -35,33 +37,34 @@ int main(int argc, char const *argv[]) {
 
         switch (input) {
             case 1: {
-                string name;
+                string firstName,lastName;
                 string accountNumber;
                 float balance;
 
-                cout << "Enter Full Name:\n";
-                getline(cin,name);
-                cin.ignore();
+                cout << "Enter First Name:\n";
+                cin >> firstName;
+
+                cout << "Enter Last Name:\n";
+                cin >> lastName;
 
                 cout << "Enter Account Number:\n";
-                getline(cin, accountNumber);
-                cin.ignore();
+                cin >> accountNumber;
 
                 cout << "Enter Your Balance:\n";
                 cin >> balance;
-                cin.ignore();
 
-                ATM newAccount = ATM(name,accountNumber,balance);
+                ATM newAccount = ATM(firstName,lastName,accountNumber,balance);
 
                 // Search for empty slot
                 for(int i = 0;i < numOfAccounts;i++){
-                    if (accounts[i].getName() == "") {
+                    if (accounts[i].getFirstName() == "") {
                         accounts[i] = newAccount;
                         break;
                     }
                 }
 
                 printAccount(newAccount);
+                archiveAccounts(accounts);
                 break;
             }// End case 1
             case 2: {
@@ -115,6 +118,7 @@ int main(int argc, char const *argv[]) {
                         break;
                 }// End inner switch statement
                 askAccountDetails(accounts[index]);
+                updateAccount(accounts[index],accounts);
                 input = -1;
             }// End case 2
                 break;
@@ -122,15 +126,13 @@ int main(int argc, char const *argv[]) {
             default:
                 break;
         }
-        // Needs to be fixed
-        //archiveAccounts(accounts);
     }while (input != -1);
     return 0;
 }
 
 
 void printAccount(ATM account){
-    cout << "Account Name: " << account.getName() << endl;
+    cout << "Account Name: " << account.getFirstName() << " " << account.getLastName() << endl;
     cout << "Account Number: " << account.getAccountNumber() << endl;
     cout << "Balance: $ " << account.getBalance() << endl << endl << endl;
 }
@@ -222,17 +224,58 @@ void askAccountDetails(ATM account){
     }
 }
 
+ATM* grabAccounts(){
+    ifstream input;
+    input.open("accounts.txt");
+    int index = 0;
+    string name,info;
+    ATM* accounts = new ATM[100];
+
+    while (!input.eof()) {
+        input >> name;
+        ATM account = ATM();
+        account.setFirstName(name);
+        for (int i = 0; i < 3; i++) {
+            input >> info;
+            if(i == 0)
+                account.setLastName(info);
+            else if(i == 1){
+                account.setAccountNumber(info);
+            }else{
+                account.setBalance(stoi(info));
+            }
+        }
+        accounts[index] = account;
+        index++;
+    }
+    return  accounts;
+}
+
 void archiveAccounts(ATM* accounts){
     ofstream output;
-    output.open("binarySave.txt");
+    output.open("accounts.txt");
 
     for (int i = 0; i < 100; i++) {
-        if (accounts[i].getName() != "" && accounts[i].getAccountNumber() != "") {
-            output << "Account Name: " << accounts[i].getName();
-            output << " Account Number:" << accounts[i].getAccountNumber();
-            output << " Balance: $" << accounts[i].getBalance() << endl;
+        if (accounts[i].getFirstName() != "" && accounts[i].getAccountNumber() != "") {
+            output << accounts[i].getName();
+            output << " " << accounts[i].getAccountNumber();
+            output << " " << accounts[i].getBalance() << endl;
         }
     }
 
     output.close();
+}
+
+void updateAccount(ATM account,ATM* accounts){
+
+    ofstream output;
+    output.open("accounts.txt");
+
+    for (int i = 0; i < 100; i++) {
+        if(accounts[i].getFirstName() == account.getFirstName() && accounts[i].getAccountNumber() == account.getAccountNumber()){
+            output << accounts[i].getFirstName() << " " << accounts[i].getLastName();
+            output << " " << accounts[i].getAccountNumber();
+            output << " " << accounts[i].getBalance() << endl;
+        }
+    }
 }

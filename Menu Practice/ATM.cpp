@@ -4,20 +4,26 @@
 using namespace std;
 
 ATM::ATM(){
-  this->name = "";
+  this->firstName = "";
+  this->lastName = "";
   this->accountNumber = "";
   this->balance = 0.0;
 }
 
-ATM::ATM(string name,string accountNumber,float balance){
-  this->name = name;
+ATM::ATM(string firstName,string lastName,string accountNumber,float balance){
+  this->firstName = firstName;
+  this->lastName = lastName;
   this->accountNumber = accountNumber;
   this->balance = balance;
 }
 
 // Setters
-void ATM::setName(string name){
-  this->name = name;
+void ATM::setFirstName(string firstName){
+  this->firstName = firstName;
+}
+
+void ATM::setLastName(string lastName){
+  this->lastName = lastName;
 }
 
 void ATM::setAccountNumber(string accountNumber){
@@ -30,7 +36,15 @@ void ATM::setBalance(float balance){
 
 // Getters
 string ATM::getName(){
-  return this->name;
+  return this->firstName + " " + this->lastName;
+}
+
+string ATM::getFirstName(){
+  return this->firstName;
+}
+
+string ATM::getLastName(){
+  return this->lastName;
 }
 
 string ATM::getAccountNumber(){
