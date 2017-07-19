@@ -58,8 +58,9 @@ int main(int argc, char const *argv[]) {
 
     while (getline(input,line)) {
       line = removeSpaces(line);
+      line = removeSpaces(line);
       lines[lineNumber] = line;
-
+      cout << line << endl << endl;
       lineNumber++;
     }
   }
@@ -128,7 +129,7 @@ int main(int argc, char const *argv[]) {
   }
 
   */
-  
+
   return 0;
 }
 
