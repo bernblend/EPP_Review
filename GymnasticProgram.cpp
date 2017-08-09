@@ -113,13 +113,10 @@ void input() {
             // Should always be true if inside this control statement
             valid = true;
         }
-
     }
-
     // Variables to find contestant with highest score
     double highest = 0;
     int highestContestant = 0;
-
     // Search through averages array to find index of highest average
     for (int i = 0; i < 10; i++) {
         if (highest <= averages[i]) {
@@ -127,54 +124,45 @@ void input() {
             highestContestant = contestants[i];
         }
     }
-
     // Print contestant with highest score
     printf("Contestant %i had the highest score.\n",highestContestant);
-
 } // End main
 
 
 // Find the average score of the judges functions
 double findAverageScore(int *array,int size){
-
     // variables
     double total = 0;
     int highest = 0;
     int lowest = 10;
-
     // Iterate through array of scores and find the highest number and lowest number
     for (int i = 0; i < size; i++) {
-
         // Find highest number
         if (highest < array[i]) {
             highest = array[i];
         }
-
         // Find lowest number
         if (lowest > array[i]) {
             lowest = array[i];
         }
     }
-
     // Remove highest and lowest and get total
-    for (int i = 0; i < size; i++) {
-
+    for (int i = 0; i < size; i++)
+    {
         // Remove highest number
-        if (highest == array[i]) {
+        if (highest == array[i])
+        {
             array[i] = 0;
             highest = 0;
         }
-
         // Remove lowest number
         if (lowest == array[i]){
             array[i] = 0;
             lowest = 0;
         }
-
         // Add up total amount
         total += array[i];
     }
-
     // Return average score
     return total/(size-2);
 }
